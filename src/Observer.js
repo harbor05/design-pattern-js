@@ -1,0 +1,4 @@
+/**
+ * Observer Pattern
+ */
+class Observer {}

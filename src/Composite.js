@@ -1,0 +1,4 @@
+/**
+ * Composite Pattern
+ */
+class Composite {}
