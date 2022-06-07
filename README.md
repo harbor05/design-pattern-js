@@ -1,7 +1,5 @@
 ## **Design Patterns with Javascript**
 
-</br>
-
 ### **Contents**
 
 - [Meta Information](#Meta-Information)
