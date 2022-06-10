@@ -12,7 +12,7 @@ class Onboarding {
   }
 }
 
-// Updated interface
+// New interface
 class AdvancedOnboarding {
   /**
    * 학교 등록
