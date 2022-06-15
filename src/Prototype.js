@@ -35,7 +35,7 @@ class User {
   }
 }
 
-let proto = new User("David", "moon", "pending");
+let proto = new User("First Name", "Last Name", "pending");
 let prototype = new UserPrototype(proto);
 let user = prototype.clone();
 
