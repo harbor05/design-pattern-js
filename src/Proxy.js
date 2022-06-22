@@ -4,8 +4,8 @@
 function StockPrice() {
   /**
    * Stock Price
-   * @param {String} name Stock Name
-   * @return {Number | String} Stock Price / Empty String
+   * @param {String} name - Stock Name
+   * @returns {Number | String} Stock Price / Empty String
    */
   this.getStockPrice = function (name) {
     console.log("Proxy requests:", name);
@@ -26,10 +26,12 @@ function StockPrice() {
  */
 function StockPriceProxy() {
   let stockPrice = new StockPrice();
-  let stockPriceCache = {};
+  let stockPriceCache = {}; // Cache object
   return {
     /**
      * Proxy에서 실제 객체에 요청하는 api
+     * @description
+     * cache object에 값이 존재하지 않는 경우 실행
      * @param {String} name
      * @returns {String} Cache 된 Items
      */
@@ -51,6 +53,7 @@ function StockPriceProxy() {
 
 function getPrices() {
   let priceProxy = new StockPriceProxy();
+
   priceProxy.getStockPrice("bitcoin");
   priceProxy.getStockPrice("ethereum");
   priceProxy.getStockPrice("ethereum");
