@@ -23,6 +23,7 @@
 │   ├── Composite.js
 │   ├── Observer.js
 │   ├── Prototype.js
+│   ├── Proxy.js
 │   ├── Singleton.js
 │   ├── StrategyMethod.js
 │   ├── TemplateMethod.js
