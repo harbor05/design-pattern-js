@@ -12,7 +12,7 @@ class Context {
   /**
    * StartsWith
    *
-   * Context 문자열(Roman)을 십진법으로 변환하기 위한 문자열 비교
+   * Context 문자열(ROMAN_NUMBER)을 십진법으로 변환하기 위한 문자열 비교
    * @param {String} str - Expression's one, four, five, nine
    * @returns {Boolean} Boolean
    */
@@ -35,7 +35,10 @@ class Expression {
    * Interpreter
    *
    * @description
-   * ROMAN 문자열을 십진법으로 변경
+   * ROMAN_NUMBER 문자열을 십진법으로 변경
+   * @example
+   * Expression의 nine에 할당된 문자열의 길이만큼 잘라내어 ROMAN_NUMBER과 일치한다면 startsWith()는 해당 문자열을 반환
+   * 그리고 context의 문자열의 0-1까지 잘라내고 context의 output 값에 (자리수 * 9)을 더하여 십진 값을 할당한다.
    * @param {Object} context - Context class
    * @returns
    */
@@ -48,7 +51,7 @@ class Expression {
       // "", 900(CM), 90(XC), 9(IX)
       console.log("nine init", context.input, context.output, this.multiplier);
       context.output += this.multiplier * 9; // context.output = context.output + (100 * 9)
-      context.input = context.input.substr(2);
+      context.input = context.input.substr(2); // Roman 표기 방법에 따른 문자열의 길이만큼 substr() 실행
       console.log("nine result", context.input, context.output);
     } else if (context.startsWith(this.four)) {
       // "", 400(CD), 40(XL), 4(IV)
@@ -60,7 +63,7 @@ class Expression {
       // "", 500(D), 50(L), 5(V)
       console.log("five init", context.input, context.output, this.multiplier);
       context.output += this.multiplier * 5;
-      context.input = context.input.substr(1);
+      context.input = context.input.substr(1); // Roman 표기 방법에 따른 문자열의 길이만큼 substr() 실행
       console.log("five result", context.input, context.output);
     }
     while (context.startsWith(this.one)) {
@@ -73,9 +76,9 @@ class Expression {
   }
 }
 
-const ROMAN = "MCMXXVIII"; // 1928
+const ROMAN_NUMBER = "MCMXXVIII"; // 1928
 const tree = [];
-let context = new Context(ROMAN);
+let context = new Context(ROMAN_NUMBER);
 
 // Expression's arguments => name, one, four, five, nine, multiplier
 tree.push(new Expression("thousand", "M", " ", " ", " ", 1000)); // 1000
@@ -92,4 +95,4 @@ const runInterpreter = () => {
 // 실행
 runInterpreter();
 
-console.log("Run Interpreter result:", ROMAN + " = " + context.output);
+console.log("Run Interpreter result:", ROMAN_NUMBER + " = " + context.output);
