@@ -39,7 +39,7 @@ class AdvancedOnboarding {
 
   // return New Onboarding message
   setRegistration(name, age) {
-    return `Member ${name} is ${age} years old and has ${this.siblings} siblings, from ${this.city} also graduated ${this.college}`;
+    return `Member ${name} is ${age} years old and has ${this.siblings} siblings,  ${this.city} also graduated ${this.college}`;
   }
 }
 

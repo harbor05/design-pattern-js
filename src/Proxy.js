@@ -27,6 +27,7 @@ function StockPrice() {
 function StockPriceProxy() {
   let stockPrice = new StockPrice();
   let stockPriceCache = {}; // Cache object
+
   return {
     /**
      * Proxy에서 실제 객체에 요청하는 api

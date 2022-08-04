@@ -21,6 +21,7 @@
 ├── src/
 │   ├── Adapter.js
 │   ├── Composite.js
+│   ├── Decorator.js
 │   ├── Interpreter.js
 │   ├── Observer.js
 │   ├── Prototype.js

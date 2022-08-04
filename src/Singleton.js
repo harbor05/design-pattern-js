@@ -1,13 +1,12 @@
 /**
  * Singleton Pattern
- * @description
  */
 class Singleton {
   instance = null;
 
-  constructor() {
-    this.getInstance();
-  }
+  // constructor() {
+  //   this.getInstance();
+  // }
 
   createInstance() {
     let object = new Object("Instance A");
@@ -31,9 +30,9 @@ class Singleton {
 }
 
 let instanceA = new Singleton();
-let instanceB = new Singleton();
-
 console.log("instanceA", instanceA);
+
+let instanceB = new Singleton();
 console.log("instanceB", instanceB);
 
 console.log("isSingleton", instanceA.getInstance() === instanceB.getInstance());
