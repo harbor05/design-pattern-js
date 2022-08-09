@@ -23,6 +23,7 @@
 │   ├── Composite.js
 │   ├── Decorator.js
 │   ├── Interpreter.js
+│   ├── Iterator.js
 │   ├── Observer.js
 │   ├── Prototype.js
 │   ├── Proxy.js
